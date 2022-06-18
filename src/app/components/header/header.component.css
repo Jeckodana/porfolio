@@ -1,0 +1,40 @@
+header {
+    background-image: url(https://img.freepik.com/foto-gratis/textura-pared-estuco-azul-marino-relieve-decorativo-abstracto-grunge-fondo-color-rugoso-gran-angular_1258-28311.jpg?size=626&ext=jpg&ga=GA1.2.283220629.1653337618);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 300px;
+    position: relative;
+}
+img#logoArgentinaPrograma{
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 140px;
+    height: 50px;
+}
+h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-left: 10px;
+    margin-top: -7px;
+}
+#redessociales{
+    font-size: 30px;
+    position: absolute;
+    right: 90px;
+    top: 10px; 
+    margin-left: 10px; 
+}
+
+button#Login{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
+   font-size: 18px;
+   background-color: rgb(186, 219, 223);
+   width: 70px;
+   height: 35px;
+   border-bottom: 2px solid black;
+   border-radius: 10%;
+   position:absolute;
+   right: 10px;
+   top: 10px;
+}
