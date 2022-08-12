@@ -1,13 +1,58 @@
-<header>
-    
-    <img id="logoArgentinaPrograma" src="../assets/logo_argentina_programa.jpg" alt="Logo Argentina Programa">
-    <h4>Argentina Programa - #YoProgramo</h4>
-    <div id="redessociales" >
-        <a href="https://www.facebook.com/jesica.deluret" ><img src="../assets/facebook.png" width="35px" height="35px"></a>     
-        <a href="https://www.instagram.com/jesica_deluret/"><img src="../assets/instagram.png" width="35px" height="35px"></a>
-        <a href="https://www.github.com/Jeckodana" ><img src="../assets/github.png" width="35px" height="35px"></a>     
-        <a href="https://www.linkedin.com/in/jesica-deluret-a0240ab3/"><img src="../assets/linkedin.png" width="35px" height="35px"></a>
-    </div> 
-    <button id="Login">Login</button>
-
+<header >    
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img id="logoArgentinaPrograma" src="../assets/logo_argentina_programa.png" alt="Logo Argentina Programa"> 
+            <h6>#YoProgramo </h6>
+          </a>
+            <div id="redessociales" >
+                <a href="https://www.facebook.com/jesica.deluret" ><img src="../assets/facebook.png" width="35px" height="35px"></a>     
+                <a href="https://www.instagram.com/jesica_deluret/"><img src="../assets/instagram.png" width="35px" height="35px"></a>
+                <a href="https://www.github.com/Jeckodana" ><img src="../assets/github.png" width="35px" height="35px"></a>     
+                <a href="https://www.linkedin.com/in/jesica-deluret-a0240ab3/"><img src="../assets/linkedin.png" width="35px" height="35px"></a>
+            </div>
+            <a class="button" [routerLink]="['/iniciar-sesion']" >Login</a>
+           
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/acercade']">About me </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/educacion']">Educacion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/experiencia']">Experiencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/skills']">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/proyectos']">Proyectos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
 </header>
+
+
+<footer>
+  <p>Copyright &copy; 2022 Diseño web realizado por Jesica Deluret</p>
+</footer>
+
+
+
+<!--<div id="piedepagina" class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+ 
+  </footer>
+</div>-->

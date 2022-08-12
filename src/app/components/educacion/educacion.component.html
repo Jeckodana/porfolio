@@ -1,3 +1,65 @@
 <section>
+    <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
+    
     <h2 id="Educacion">Educación</h2>
+
+        <ul class="contenedor" id="lEducacion">
+            <li class="itemeducacion">
+                <div class="card" style="width: 18rem;"> 
+                    <div *ngFor="let Educacion of educa" class="card-body">
+                        <div class="iconos">
+                            <i class="bi bi-pen-fill"></i>
+                            <i class="bi bi-trash3-fill"></i>
+                        </div>
+                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
+                        <p>{{Educacion.institucion}} <br>
+                         {{Educacion.titulo}} <br>
+                        {{Educacion.periodo}}
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;"> 
+                    <div class="card-body">
+                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
+                        <p>Escuela Fabian Catroppa n° 4-194 <br>
+                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
+                        2006
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
+                        <p>Escuela Fabian Catroppa n° 4-194 <br>
+                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
+                        2006
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
+                        <p>Escuela Fabian Catroppa n° 4-194 <br>
+                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
+                        2006
+                        </p>
+                    </div>
+                </div>    
+                <div class="card" style="width: 18rem;">
+                    <div class="plus">
+                        <i class="bi bi-plus-circle-fill" id="plus"></i>
+                    </div>
+                </div>  
+                
+                   
+            </li>
+        </ul>
+      
 </section>
+
+<footer>
+    <p>Copyright &copy; 2022 Diseño web realizado por Jesica Deluret</p>
+</footer>
+                
+
+

@@ -1,17 +1,20 @@
 section{
-    background:linear-gradient(rgb(87, 199, 244), white);
-    border-color: aliceblue;
-    border-style: double;
-    border-radius: 32px;
-    padding-bottom: 20px;
-    position:relative;
+    background-image: url(https://images.pexels.com/photos/7464004/pexels-photo-7464004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)  ;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+    width: auto;
+    position: relative;
+    margin-bottom: 0px;
 }
 h2#Educacion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: rgb(36, 35, 35);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10px; 
+   
 }
 h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,5 +22,77 @@ h2{
     color: rgb(36, 35, 35);
     text-align: center;
     margin-top: 10px;
+  
  
+}
+.contenedor{
+    display: flex;
+    width:100%;
+    float:left;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 3% 3% 3% 0%;
+}
+@media screen and (max-width: 720px) {
+    .contenedor {  
+        width:auto;
+        float:none; 
+        
+    }
+}
+ul#lEducacion li{
+    padding: 10px;
+    list-style: none;
+}
+.card{
+    padding: 10px;
+    border-color: rgb(134, 12, 145);
+    border-style: double;
+    display: flexbox;
+    display:inline-block;
+    font-size: 15px;
+    background: linear-gradient(rgb(242, 210, 245), rgb(128, 44, 136)) ;
+    overflow: hidden;
+    margin: 20px;
+    transition: all .3s ease;
+}
+div.card:hover {
+    transform: scale(1.1);
+    border: 2px solid #fe4918;
+    box-shadow: 0px, 0px, 50px, #666;
+}
+div.iconos{
+    padding: auto;
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: right;
+    position: relative;
+    right: -10px; 
+    
+
+}
+i#plus{
+    font-size:xx-large;
+
+}
+
+img.logoInstitucion {
+    height: 50px;
+    width: 50px;
+}
+
+.home img{
+    width: 35px;
+    height: 35px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+footer{
+    background-color: #252627;
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    color:antiquewhite;
+    font-size: small;
+    text-align: center;
 }

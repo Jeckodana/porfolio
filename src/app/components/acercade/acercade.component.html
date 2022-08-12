@@ -1,7 +1,8 @@
 <section> 
-    <img id="FotoPerfil" src="../assets/fotoperfil.jpeg">
-    <h2 id="Acercade">Acerca de</h2>
-    <div id="nombre">Jesica Daiana Deluret</div>
+    <img class="img-fluid, FotoPerfil" src="../assets/fotoperfil.jpeg">
+    <h2 id="Acercade">About me</h2>
+    <div id="nombre">{{miporfolio[0]['nombre']}} {{miporfolio[0]['apellido']}}</div>
+    
     <br>
     <div id="Titulo">
         <div class="btn-edit" onclick="cambiar_parrafo()">
@@ -10,13 +11,12 @@
             </a>        
         </div>
     </div>
-    <div>
-        <p id="text-acercade">Administrativa en Estudio contable - 
-        Tecnica Superior en Administracion de empresas - 
-        Fullstack Developer Jr.</p>
+    <div id="text-acercade">
+        <p>{{miporfolio[0]['info_profesional']}}</p>
     </div>  
     <div>
         <input id="edit-acercade" type="text" oninput="myfunction1(this.value)" style="display:none">
     </div>
+    
 </section>
 
