@@ -1,41 +1,33 @@
-
 <section>
-    <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
-    <h2 id="Experiencia">Experiencia</h2>
-    <div class="contenedor" >
-        <div class="card" style="width: 18rem;"> 
-           <div class="card-body">
-             <h5 class="card-title">Empresa</h5>
-             <img class="logo" src="../assets/logo-estudio.jpeg">
-             <h6>Puesto</h6>
-             <p class="card-text">Periodo</p>
-           </div>
-        </div>
-        <div class="card" style="width: 18rem;"> 
-          <div class="card-body">
-            <h5 class="card-title">Empresa</h5>
-            <img class="logo" src="../assets/logo-estudio.jpeg">
-            <h6>Puesto</h6>
-            <p class="card-text">Periodo</p>
+  <a class="home" [routerLink]="['/porfolio']"><img src="../assets/home_icon.png" /></a>
+  <h2 id="Experiencia">Experiencia</h2>
+  <ul class="contenedor" id="1Experiencia">
+    <li class="itemexperiencia">
+      <div *ngFor="let Experiencia of experiencia" class="card" style="width: 18rem">
+        <div class="card-body">
+          <div class="iconos">
+            <i class="bi bi-pen-fill btn" [routerLink]="['/editexperiencia/' + Experiencia['id']]"></i>
+            <i class="bi bi-trash3-fill" (click)="eliminarExperiencia(Experiencia.id)"></i>
           </div>
-       </div>
-        <div class="card" style="width: 18rem;"> 
-            <div class="card-body">
-              <h5 class="card-title">Empresa</h5>
-              <img class="logo" src="../assets/logo-estudio.jpeg">
-              <h6>Puesto</h6>
-              <p class="card-text">Periodo</p>
-            </div>
-         </div>
-         <div class="card" style="width: 18rem;"> 
-            <div class="card-body">
-              <h5 class="card-title">Empresa</h5>
-              <img class="logo" src="../assets/logo-estudio.jpeg">
-              <h6>Puesto</h6>
-              <p class="card-text">Periodo</p>
-            </div>
-         </div>
-       </div> 
+          <img class="logoEmpresa" [src]="Experiencia['logo_empresa']" />
+          <p>
+            {{ Experiencia["puesto"] }} <br />
+            {{ Experiencia["empresa"] }} <br />
+            {{ Experiencia["fecha_inicio"] }} - {{ Experiencia["fecha_fin"]
+            }}<br />
+            {{ Experiencia["actividades"] }}
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <div id="plus">
+            <a class="plus" [routerLink]="['/newexperiencia']"><i class="bi bi-plus-circle-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <footer>

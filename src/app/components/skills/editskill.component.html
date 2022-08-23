@@ -1,0 +1,55 @@
+<div class="conteiner" class="m-5" >
+    <form (ngSubmit)="Update()" novalidate #f="ngForm" class="row g-4">
+      <h4>Actualizar habilidad</h4>
+        <div class="formGrop">
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label  class="form-label">Modificar Skill</label>
+                    <input type="text" class="form-control" id="skill" name="skill" [(ngModel)] = "skills.habilidad" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="institucion" class="form-label">Modificar detalle</label>
+                    <input type="text" class="form-control" id="detalle" name="detalle"  [(ngModel)] = "skills.detalle" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="periodo" class="form-label">Modificar nivel de la habilidad</label>
+                    <br>
+                    <small class="form-text text-muted">1 para nivel Basico, 2 para nivel Intermadio o 3 para nivel Avanzado.</small>
+                    <!-- <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Basico
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Intermedio
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                        <label class="form-check-label" for="exampleRadios3">
+                          Avanzado
+                        </label>
+                      </div> -->
+                    <input type="text" class="form-control" id="nivel" name="nivel"  [(ngModel)] = "skills.nivel"  required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-12" p-3>
+                <button class="btn btn-primary"  type="submit">Actualizar item Skill</button>
+                <button class="btn btn-primary btn-volver" [routerLink]="['/skills']">Volver</button>
+                
+            </div>
+        </div>
+    </form>
+</div>
+

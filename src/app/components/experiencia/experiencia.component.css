@@ -13,7 +13,8 @@ h2#Experiencia{
     font-weight: bold;
     color: rgb(36, 35, 35);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10px; 
+   
 }
 h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -21,15 +22,8 @@ h2{
     color: rgb(36, 35, 35);
     text-align: center;
     margin-top: 10px;
+  
  
-}
-.home img{
-    width: 35px;
-    height: 35px;
-    margin-top: 2%;
-    margin-left: 2%;
-
-
 }
 .contenedor{
     display: flex;
@@ -46,7 +40,10 @@ h2{
         
     }
 }
-
+ul#lExperiencia li{
+    padding: 10px;
+    list-style: none;
+}
 .card{
     padding: 10px;
     border-color: rgb(134, 12, 145);
@@ -57,10 +54,43 @@ h2{
     background: linear-gradient(rgb(242, 210, 245), rgb(128, 44, 136)) ;
     overflow: hidden;
     margin: 20px;
+    transition: all .3s ease;
+    width: 300px;
+    height: 330px;
 }
-.logo{
-    height: 60px;
-    width: 60px;
+div.card:hover {
+    transform: scale(1.1);
+    border: 2px solid #fe4918;
+    box-shadow: 0px, 0px, 50px, #666;
+}
+div.iconos{
+    padding: auto;
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: right;
+    position: relative;
+    right: -10px; 
+}
+.card:last-child{
+    background: linear-gradient(rgba(242, 210, 245, .5), rgba(128, 44, 136, .5)) ;
+}
+#plus{
+    padding: auto;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+img.logoEmpresa {
+    height: 50px;
+    width: 50px;
+}
+
+.home img{
+    width: 35px;
+    height: 35px;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 footer{
     background-color: #252627;

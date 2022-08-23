@@ -1,3 +1,4 @@
+
 <section>
     <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
     
@@ -5,53 +6,26 @@
 
         <ul class="contenedor" id="lEducacion">
             <li class="itemeducacion">
-                <div class="card" style="width: 18rem;"> 
-                    <div *ngFor="let Educacion of educa" class="card-body">
+                <div *ngFor="let Educacion of educacion" class="card" style="width: 18rem;"> 
+                    <div  class="card-body">
                         <div class="iconos">
-                            <i class="bi bi-pen-fill"></i>
-                            <i class="bi bi-trash3-fill"></i>
+                            <i class="bi bi-pen-fill btn"  [routerLink]="['/editareducacion/'+ Educacion['id'] ]"></i>
+                            <i class="bi bi-trash3-fill" (click)="eliminarEducacion(Educacion.id)"></i>
                         </div>
-                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
-                        <p>{{Educacion.institucion}} <br>
-                         {{Educacion.titulo}} <br>
-                        {{Educacion.periodo}}
+                        <img class="logoInstitucion" [src]="Educacion['logo_institucion']">
+                        <p>{{Educacion['titulo']}} <br>
+                            {{Educacion['institucion']}} <br>
+                            {{Educacion['periodo']}}
                         </p>
                     </div>
-                </div>
+                </div> 
                 <div class="card" style="width: 18rem;"> 
-                    <div class="card-body">
-                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
-                        <p>Escuela Fabian Catroppa n° 4-194 <br>
-                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
-                        2006
-                        </p>
+                    <div  class="card-body">
+                        <div id=plus >  
+                            <a class="plus" [routerLink]="['/nuevaeducacion']" ><i class="bi bi-plus-circle-fill" ></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
-                        <p>Escuela Fabian Catroppa n° 4-194 <br>
-                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
-                        2006
-                        </p>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <img class="logoInstitucion" src="../../../assets/esc.catroppa logo.jpg">
-                        <p>Escuela Fabian Catroppa n° 4-194 <br>
-                         Gestion de las Organizaciones, <br> con orientacion en gestion contable agraria <br>
-                        2006
-                        </p>
-                    </div>
-                </div>    
-                <div class="card" style="width: 18rem;">
-                    <div class="plus">
-                        <i class="bi bi-plus-circle-fill" id="plus"></i>
-                    </div>
-                </div>  
-                
-                   
+                </div>              
             </li>
         </ul>
       

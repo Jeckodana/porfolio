@@ -1,0 +1,38 @@
+<div class="conteiner" class="m-5" >
+    <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
+        <h4>Cargar Habilidad</h4>
+        <div class="formGrop">
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label  class="form-label">Nueva Skill</label>
+                    <input type="text" class="form-control" id="skill" name="skill" [(ngModel)] = "habilidad" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="institucion" class="form-label">Detalle</label>
+                    <input type="text" class="form-control" id="detalle" name="detalle"  [(ngModel)] = "detalle" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="periodo" class="form-label">Nivel de la habilidad</label>
+                    <br>
+                    <small class="form-text text-muted">1 para nivel Basico, 2 para nivel Intermadio o 3 para nivel Avanzado.</small>
+                    <input type="text" class="form-control" id="nivel" name="nivel"  [(ngModel)] = "nivel"  required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-12" p-3>
+                <button class="btn btn-primary"  type="submit">Agregar item Skill</button>
+                <button class="btn btn-primary btn-volver" [routerLink]="['/skills']">Volver</button>
+                
+            </div>
+        </div>
+    </form>
+</div>
+
+

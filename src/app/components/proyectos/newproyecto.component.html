@@ -1,0 +1,47 @@
+<div class="conteiner" class="m-5">
+    <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
+        <h4>Cargar Proyecto</h4>
+        <div class="formGrop">
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="puesto" class="form-label">Nombre del nuevo proyecto</label>
+                    <input type="text" class="form-control" id="nombreProyecto" name="nombreProyecto" [(ngModel)] = "nombre_proyecto" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="empresa" class="form-label">Descripcion del proyecto</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)] = "descripcion" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="fecha_fin" class="form-label">Fecha de finalizacion del proyecto</label>
+                    <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)] = "fecha_fin" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="actividades" class="form-label">Link a foto del Proyecto</label>
+                    <input type="text" class="form-control" id="fotoProyecto" name="fotoProyecto" [(ngModel)] = "foto_proyecto" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="logo_empresa" class="form-label">Link a la evidencia</label>
+                    <input type="text" class="form-control" id="evidencia" name="evidencia" [(ngModel)] = "link_evidencia" required>
+                </div>
+            </div>
+            <br>
+            <div class="col-12" p-3>
+                <button class="btn btn-primary" type="submit">Agregar item Proyecto</button>
+                <button class="btn btn-primary btn-volver" [routerLink]="['/proyectos']">Volver</button>
+                
+            </div>
+        </div>
+    </form>
+</div>
