@@ -27,6 +27,7 @@ import { EditproyectoComponent } from './components/proyectos/editproyecto.compo
 import { NewskillComponent } from './components/skills/newskill.component';
 import { EditskillComponent } from './components/skills/editskill.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { EditskillComponent } from './components/skills/editskill.component';
     NewproyectoComponent,
     EditproyectoComponent,
     NewskillComponent,
-    EditskillComponent
+    EditskillComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { EditskillComponent } from './components/skills/editskill.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [PorfolioService,{provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true}],
+  providers: [InterceptorService,{provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true}],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

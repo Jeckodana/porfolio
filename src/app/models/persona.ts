@@ -5,14 +5,13 @@ export class persona {
     foto_perfil: String;
     info_profesional: String;
 
-    constructor(nombre: String, apellido: String, foto_perfil: String, info_profesional: String) { 
+    constructor( nombre: String, apellido: String, foto_perfil: String, info_profesional: String) { 
+        
         this.nombre = nombre;
         this.apellido = apellido;
         this.foto_perfil = foto_perfil;
         this.info_profesional = info_profesional;
     }
 
-    public fullName(nombre: String, apellido: String){
-        return this.nombre + "" + this.apellido;
-    }
+   
 }

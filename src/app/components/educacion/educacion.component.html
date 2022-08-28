@@ -1,16 +1,18 @@
+<div class="conteiner">
 
-<section>
-    <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
-    
-    <h2 id="Educacion">Educación</h2>
+    <section>
+        <a class="home" [routerLink]="['/porfolio']"><img src="../assets/home_icon.png"></a>
+
+        <h2 id="Educacion">Educación</h2>
 
         <ul class="contenedor" id="lEducacion">
             <li class="itemeducacion">
-                <div *ngFor="let Educacion of educacion" class="card" style="width: 18rem;"> 
-                    <div  class="card-body">
+                <div *ngFor="let Educacion of educacion" class="card" style="width: 18rem;">
+                    <div class="card-body">
                         <div class="iconos">
-                            <i class="bi bi-pen-fill btn"  [routerLink]="['/editareducacion/'+ Educacion['id'] ]"></i>
-                            <i class="bi bi-trash3-fill" (click)="eliminarEducacion(Educacion.id)"></i>
+                            <i class="bi bi-pen-fill btn" *ngIf="logged"
+                                [routerLink]="['/editareducacion/'+ Educacion['id'] ]"></i>
+                            <i *ngIf="logged" class="bi bi-trash3-fill" (click)="eliminarEducacion(Educacion.id)"></i>
                         </div>
                         <img class="logoInstitucion" [src]="Educacion['logo_institucion']">
                         <p>{{Educacion['titulo']}} <br>
@@ -18,22 +20,20 @@
                             {{Educacion['periodo']}}
                         </p>
                     </div>
-                </div> 
-                <div class="card" style="width: 18rem;"> 
-                    <div  class="card-body">
-                        <div id=plus >  
-                            <a class="plus" [routerLink]="['/nuevaeducacion']" ><i class="bi bi-plus-circle-fill" ></i></a>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div id=plus>
+                            <a class="plus" [routerLink]="['/nuevaeducacion']" *ngIf="logged"><i
+                                    class="bi bi-plus-circle-fill"></i></a>
                         </div>
                     </div>
-                </div>              
+                </div>
             </li>
         </ul>
-      
-</section>
 
+    </section>
+</div>
 <footer>
     <p>Copyright &copy; 2022 Diseño web realizado por Jesica Deluret</p>
 </footer>
-                
-
-

@@ -1,34 +1,34 @@
-
 <section>
-  <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
-    <h2 id="Skills">Hard & Soft Skills</h2>
-    <ul class="contenedor" id="lSkill">
-      <li class="itemeducacion">
-          <div *ngFor="let Skills of skills " class="card" style="width: 18rem;"> 
-              <div  class="card-body">
-                  <div class="iconos">
-                      <i class="bi bi-pen-fill btn"  [routerLink]="['/editskill/'+ Skills['id'] ]"></i>
-                      <i class="bi bi-trash3-fill" (click)="eliminarSkill(Skills.id)"></i>
-                  </div>
-                  <div *ngIf="Skills.nivel ===1" class="bateria"> <i class="bateria bi-battery-charging"></i></div>
-                  <div *ngIf="Skills.nivel ===2" class="bateria"><i class="bateria bi-battery-half"></i></div> 
-                  <div *ngIf="Skills.nivel ===3" class="bateria"> <i class="bateria bi-battery-full"></i></div>
-                    <p class="itemtitulo"> {{Skills['habilidad']}} </p>
-                    <p> {{Skills['detalle']}}
-                    </p>
-              </div>
-          </div> 
-          <div class="card" style="width: 18rem;"> 
-              <div  class="card-body">
-                  <div id=plus >  
-                      <a class="plus" [routerLink]="['/newskill']" ><i class="bi bi-plus-circle-fill" ></i></a>
-                  </div>
-              </div>
-          </div>              
-      </li>
+  <a class="home" [routerLink]="['/porfolio']"><img src="../assets/home_icon.png"></a>
+  <h2 id="Skills">Hard & Soft Skills</h2>
+  <ul class="contenedor" id="lSkill">
+    <li class="itemskill">
+      <div *ngFor="let Skills of skills " class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div class="iconos">
+            <i *ngIf="logged" class="bi bi-pen-fill btn" [routerLink]="['/editskill/' + Skills['id']]"></i>
+            <i *ngIf="logged" class="bi bi-trash3-fill" (click)="eliminarSkill(Skills.id)"></i>
+          </div>
+          <div *ngIf="Skills.nivel ===1" class="bateria"> <i class="bateria bi-battery-charging"></i></div>
+          <div *ngIf="Skills.nivel ===2" class="bateria"><i class="bateria bi-battery-half"></i></div>
+          <div *ngIf="Skills.nivel ===3" class="bateria"> <i class="bateria bi-battery-full"></i></div>
+          <p class="itemtitulo"> {{Skills['habilidad']}} </p>
+          <p> {{Skills['detalle']}}
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div id=plus>
+            <a *ngIf="logged" class="plus" [routerLink]="['/newskill']"><i class="bi bi-plus-circle-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </li>
   </ul>
 </section>
 
-<footer>
+<footer><br>
   <p>Copyright &copy; 2022 Diseño web realizado por Jesica Deluret</p>
 </footer>
+

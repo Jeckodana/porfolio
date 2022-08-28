@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] =[];
 
-  /*constructor(private ServEducacionService: ServEducacionService, private TokenService: TokenService) { }
-  islogged = false;*/
-  constructor(public ServEducacionService: ServEducacionService, public router: Router){}
+  constructor(private ServEducacionService: ServEducacionService, private TokenService: TokenService, public router: Router) { }
+  logged = false;
+ 
 
   ngOnInit(): void {
     this.ServEducacionService.verEducacion().subscribe(data => {
@@ -26,16 +26,16 @@ export class EducacionComponent implements OnInit {
       console.log(this.educacion[0]['institucion']);
       console.log(this.educacion[0]['periodo']);
       console.log(this.educacion);
+      if (this.TokenService.getToken()) {
+        this.logged = true;
+      } else {
+        this.logged = false;
+      }
     });
 
-   /* this.ServEducacionService.agregarEducacion().subscribe(data =>{this.educacion = data;});
-    /*if(this.TokenService.getToken()){
-      this.islogged = true;
-    } else{
-      this.islogged = false;
-    }*/
-   
-  }
+  
+   }
+
   eliminarEducacion(id?: number){
     this.ServEducacionService.eliminarEducacion(id).subscribe(data =>{
       console.log(this.ServEducacionService.eliminarEducacion(id));

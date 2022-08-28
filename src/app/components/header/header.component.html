@@ -11,17 +11,21 @@
                 <a href="https://www.github.com/Jeckodana" ><img src="../assets/github.png" width="35px" height="35px"></a>     
                 <a href="https://www.linkedin.com/in/jesica-deluret-a0240ab3/"><img src="../assets/linkedin.png" width="35px" height="35px"></a>
             </div>
-            <a class="button" [routerLink]="['/iniciar-sesion']" >Login</a>
+            <a class="button" [routerLink]="['/porfolio']" (click)="onLogOut()" *ngIf="logged">Logout</a>
+            <a class="button" [routerLink]="['/iniciar-sesion']"  *ngIf="!logged">Login</a>
+           
            
         </div>
       </nav>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div>
+             <button  class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+             <span class="navbar-toggler-icon"></span>
+            </button> 
+          </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class=" nav navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/educacion']">Educacion</a>
               </li>

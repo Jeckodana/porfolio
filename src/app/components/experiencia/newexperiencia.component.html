@@ -1,56 +1,70 @@
-<section class="contenedor" >
-<div class="conteiner" class="m-5">
-    <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4 formulario">
-        <h4>Cargar Experiencia</h4>
-        <div class="formGrop">
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="puesto" class="form-label">Nueva Puesto/Experiencia</label>
-                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)] = "puesto" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="empresa" class="form-label">Nombre de la Empresa o Institucion</label>
-                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)] = "empresa" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="fecha_inicio" class="form-label">Fecha de Inicio de la Experiencia</label>
-                    <input type="text" class="form-control" id="fecha_inicio" name="fecha_inicio" [(ngModel)] = "fecha_inicio" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="fecha_fin" class="form-label">Fecha de finalizacion de la Experiencia</label>
-                    <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)] = "fecha_fin" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="actividades" class="form-label">Detalle de actividades que desarrolla</label>
-                    <input type="text" class="form-control" id="actividades" name="actividades" [(ngModel)] = "actividades" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="logo_empresa" class="form-label">URL al Logo de la Empresa o Institucion</label>
-                    <input type="text" class="form-control" id="logo_empresa" name="logo_empresa" [(ngModel)] = "logo_empresa" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-12" p-3>
-                <button class="btn btn-primary" type="submit">Agregar item Educacion</button>
-                <button class="btn btn-primary btn-volver" [routerLink]="['/experiencia']">Volver</button>
-             <div><br></div>   
+<div class="conteiner m-5">
+    <div class="row">
+        <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+                <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4 formulario">
+                    <h4>Cargar Experiencia</h4>
+                    <div class="formGrop">
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="puesto" class="form-label">Nueva Puesto/Experiencia</label>
+                                <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto"
+                                    required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="empresa" class="form-label">Nombre de la Empresa o Institucion</label>
+                                <input type="text" class="form-control" id="empresa" name="empresa"
+                                    [(ngModel)]="empresa" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="fecha_inicio" class="form-label">Fecha de Inicio de la Experiencia</label>
+                                <input type="text" class="form-control" id="fecha_inicio" name="fecha_inicio"
+                                    [(ngModel)]="fecha_inicio" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="fecha_fin" class="form-label">Fecha de finalizacion de la
+                                    Experiencia</label>
+                                <input type="text" class="form-control" id="fecha_fin" name="fecha_fin"
+                                    [(ngModel)]="fecha_fin" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="actividades" class="form-label">Detalle de actividades que
+                                    desarrolla</label>
+                                <input type="text" class="form-control" id="actividades" name="actividades"
+                                    [(ngModel)]="actividades" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="logo_empresa" class="form-label">URL al Logo de la Empresa o
+                                    Institucion</label>
+                                <input type="text" class="form-control" id="logo_empresa" name="logo_empresa"
+                                    [(ngModel)]="logo_empresa" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12" p-3>
+                            <button class="btn btn-primary" type="submit">Agregar item Educacion</button>
+                            <button class="btn btn-primary btn-volver" [routerLink]="['/experiencia']">Volver</button>
+                            <div><br></div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
 </div>
-</section>
+          

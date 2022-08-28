@@ -1,40 +1,50 @@
-<div class="conteiner" class="m-5">
-    <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
-        <h4>Cargar Educacion</h4>
-        <div class="formGrop">
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="titulo" class="form-label">Nuevo Titulo</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)] = "titulo" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="institucion" class="form-label">Nombre de la Institucion</label>
-                    <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)] = "institucion" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="periodo" class="form-label">Año en que se recibió el titulo</label>
-                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)] = "periodo" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-4">
-                <div class="form-outline">
-                    <label for="logo_institucion" class="form-label">URL al Logo de la Institucion</label>
-                    <input type="text" class="form-control" id="logo_institucion" name="logo_institucion" [(ngModel)] = "logo_institucion" required>
-                </div>
-            </div>
-            <br>
-            <div class="col-12" p-3>
-                <button class="btn btn-primary" type="submit">Agregar item Educacion</button>
-                <button class="btn btn-primary btn-volver" [routerLink]="['/educacion']">Volver</button>
-                
+<div class="conteiner m-5">
+    <div class="row">
+        <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+                <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
+                    <h4>Cargar Educacion</h4>
+                    <div class="formGrop">
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="titulo" class="form-label">Nuevo Titulo</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo"
+                                    required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="institucion" class="form-label">Nombre de la Institucion</label>
+                                <input type="text" class="form-control" id="institucion" name="institucion"
+                                    [(ngModel)]="institucion" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="periodo" class="form-label">Año en que se recibió el titulo</label>
+                                <input type="text" class="form-control" id="periodo" name="periodo"
+                                    [(ngModel)]="periodo" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="form-outline">
+                                <label for="logo_institucion" class="form-label">URL al Logo de la Institucion</label>
+                                <input type="text" class="form-control" id="logo_institucion" name="logo_institucion"
+                                    [(ngModel)]="logo_institucion" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12" p-3>
+                            <button class="btn btn-primary" type="submit">Agregar item Educacion</button>
+                            <button class="btn btn-primary btn-volver" [routerLink]="['/educacion']">Volver</button>
+
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
 </div>

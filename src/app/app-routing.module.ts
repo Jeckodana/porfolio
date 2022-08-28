@@ -18,6 +18,7 @@ import { NewskillComponent } from './components/skills/newskill.component';
 import { EditskillComponent } from './components/skills/editskill.component';
 
 
+
 const routes: Routes = [
   {path:'porfolio', component:PorfolioComponent},
   {path:'porfolio', component:PorfolioComponent, canActivate:[GuardGuard]},
@@ -33,7 +34,7 @@ const routes: Routes = [
   {path: 'newproyecto', component:NewproyectoComponent},
   {path: 'editproyecto/:id', component:EditproyectoComponent},
   {path: 'newskill', component:NewskillComponent},
-  {path: 'editskill/:id', component:EditskillComponent},
+  {path:'editskill/:id', component:EditskillComponent},
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path:'', redirectTo:'porfolio', pathMatch:'full'},
   // { path: '**', component:NotFoundComponent }, 

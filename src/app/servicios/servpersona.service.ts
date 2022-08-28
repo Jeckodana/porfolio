@@ -15,6 +15,12 @@ export class ServpersonaService {
   public verPersona(): Observable <persona>{
     console.log(persona+"servicio agregar persona fncionando");
     return this.http.get<persona>(this.url+ 'ver');
-    console.log(persona+"servicio agregar persona fncionando");
   }
+  public buscarPersona(id: number): Observable <any>{
+    return this.http.get<any>(this.url+ `buscar/${id}`);
+
+  }  
+   public actualizarPersona(id: number, persona: persona): Observable <any>{
+     return this.http.put<any>(this.url+ `actualizar/${id}`, persona);
+   }
 }

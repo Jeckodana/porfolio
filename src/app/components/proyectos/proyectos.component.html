@@ -2,15 +2,15 @@
 <section>
     <a class="home" [routerLink]="['/porfolio']" ><img src="../assets/home_icon.png"></a>
 
-    <h2 id="Proyectos">Proyectos</h2>
+    <h2 id="Proyecto">Proyectos</h2>
 
         <ul class="contenedor" id="lProyecto">
             <li class="itemproyecto">
                 <div *ngFor="let Proyecto of proyecto" class="card" style="width: 18rem;"> 
                     <div class="card-body">
                         <div class="iconos">
-                            <i class="bi bi-pen-fill btn" [routerLink]="['/editproyecto/' + Proyecto['id']]"></i>
-                            <i class="bi bi-trash3-fill" (click)="eliminarProyecto(Proyecto.id)"></i>
+                            <i *ngIf="logged" class="bi bi-pen-fill btn" [routerLink]="['/editproyecto/' + Proyecto['id']]"></i>
+                            <i *ngIf="logged" class="bi bi-trash3-fill" (click)="eliminarProyecto(Proyecto.id)"></i>
                         </div>
                         <img class="fotoProyecto" [src]="Proyecto['foto_proyecto']" />
                         <p>
@@ -24,7 +24,7 @@
                 <div class="card" style="width: 18rem">
                     <div class="card-body">
                         <div id="plus">
-                            <a class="plus" [routerLink]="['/newproyecto']"><i class="bi bi-plus-circle-fill"></i></a>
+                            <a *ngIf="logged" class="plus" [routerLink]="['/newproyecto']"><i class="bi bi-plus-circle-fill"></i></a>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Skills } from 'src/app/models/skills';
 import { ServskillService } from 'src/app/servicios/servskill.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -12,7 +13,8 @@ export class SkillsComponent implements OnInit {
   skills: Skills[]=[];
 
 
-  constructor(private ServskillService: ServskillService,public router: Router) { }
+  constructor(private ServskillService: ServskillService, private TokenService: TokenService, public router: Router) { }
+  logged = false;
 
   ngOnInit(): void {
     this.ServskillService.verSkills().subscribe(data => {
@@ -23,10 +25,12 @@ export class SkillsComponent implements OnInit {
       console.log(this.skills[0]['nivel']);
       console.log(this.skills[0]['detalle']);
       console.log(this.skills);
+      if (this.TokenService.getToken()) {
+        this.logged = true;
+      } else {
+        this.logged = false;
+      }
     });
-
-
-    
   }
 
 eliminarSkill(id?: number){

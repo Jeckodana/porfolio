@@ -3,6 +3,7 @@ import { Experiencia } from 'src/app/models/experiecia';
 import { TokenService } from 'src/app/servicios/token.service';
 import { ServexperienciaService } from 'src/app/servicios/servexperiencia.service';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -12,16 +13,11 @@ import { Router } from '@angular/router';
 })
 export class ExperienciaComponent implements OnInit {
   experiencia: Experiencia[]=[];
-  // constructor(private ServexperienciaService: ServexperienciaService, private tokenService:TokenService) { }
-  constructor(private ServexperienciaService: ServexperienciaService, public router: Router) { }
-    // isLogged = false;
+ 
+  constructor(private ServexperienciaService: ServexperienciaService, public router: Router, private tokenService:TokenService) { }
+    logged = false;
   ngOnInit(): void {
-   /* this.agregarExperiencia();
-    if(this.tokenService.getToken()){
-      this.isLogged =true;
-    } else{
-      this.isLogged=false;
-    }*/
+  
     this.ServexperienciaService.verExperiencia().subscribe(data => {
       console.log(data);
       this.experiencia = data;
@@ -33,21 +29,26 @@ export class ExperienciaComponent implements OnInit {
       console.log(this.experiencia[0]['logo_empresa']);
       console.log(this.experiencia[0]['actividades']);
       console.log(this.experiencia);
+      if (this.tokenService.getToken()) {
+        this.logged = true;
+      } else {
+        this.logged = false;
+      }
     });
   }
   eliminarExperiencia(id?: number){
     this.ServexperienciaService.eliminarExperiencia(id).subscribe(data =>{
       console.log(this.ServexperienciaService.eliminarExperiencia(id));
-      location. reload();//metodo para refrescar la pagina
+      location. reload();
       }, err => {
         alert("No se pudo eliminar el item de experiencia");
       })
   }
 
-  Seleccionar(experiencia: Experiencia){
-    let link =['/editarexperiencia/'+ experiencia.id ];
-    this.router.navigate(link);
-    console.log(experiencia.id);
-  }
+  // Seleccionar(experiencia: Experiencia){
+  //   let link =['/editarexperiencia/'+ experiencia.id ];
+  //   this.router.navigate(link);
+  //   console.log(experiencia.id);
+  // }
 
 }

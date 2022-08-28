@@ -21,7 +21,7 @@ export class EditeducacionComponent implements OnInit {
       this.id = id['get']("id");
  
     });
-
+  
     this.ServEducacionService.buscarEducacion(this.id).subscribe(
       data =>{
         console.log(this.ServEducacionService.buscarEducacion(this.id));
@@ -32,7 +32,7 @@ export class EditeducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
-  }
+    }
 
   
   Update(): void{

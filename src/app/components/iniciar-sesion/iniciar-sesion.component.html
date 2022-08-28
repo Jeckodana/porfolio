@@ -1,8 +1,43 @@
 
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <h3 class="card-title text-center mb-5 fw-light fs-5">Iniciar Sesion</h3>
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+              <br>
+              <div class="form-floating mb-3">
+                <input type="username" class="form-control" id="username" placeholder="name@example.com" [(ngModel)]="username" name="username" required >
+                <label for="username">Usuario</label>
+              </div>
+              <div class="form-floating mb-3">
+                
+                <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password" required >
+                <label for="password">Contraseña</label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">
+                  Ingresar</button><br>
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" [routerLink]="['/porfolio']">
+                  Volver</button>
+              </div>
+              <hr class="my-4">
+              <div><br>
+              
+              <br><br></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-<h3 >Iniciar Sesion</h3>
 
-<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
+
+<!-- <form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input type="email" formControlName="email" 
@@ -24,4 +59,4 @@
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </form> -->
