@@ -1,4 +1,4 @@
-header {
+/* header {
     background-image: url(https://images.pexels.com/photos/7464004/pexels-photo-7464004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -6,7 +6,7 @@ header {
     width: 100%;
     position: relative;
     margin-bottom: 0px;
-}
+} */
 img#logoArgentinaPrograma{
     margin-top: -23px;
     margin-left: -20px;
@@ -55,7 +55,7 @@ p{
     margin-top: 10px;
 } 
  
-footer{
+/* footer{
     background-color: #252627;
     position: absolute;
     bottom: auto;
@@ -63,4 +63,5 @@ footer{
     color:antiquewhite;
     font-size: small;
     text-align: center;
-}
+} */
+

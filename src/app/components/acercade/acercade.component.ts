@@ -16,21 +16,18 @@ import { Console } from '@angular/compiler/src/util';
 export class AcercadeComponent implements OnInit {
 
   miporfolio: any;
-  persona: persona = null;
   id = 0 ;
 
   constructor(public servpersona: ServpersonaService,private activatedRouter: ActivatedRoute, private TokenService: TokenService, public router: Router) { }
   logged = false;
   ngOnInit(): void {
     this.servpersona.verPersona().subscribe(data => {
-      console.log(data);
-
       this.miporfolio = data;
-      console.log(this.miporfolio[0]['id']);
-      console.log(this.miporfolio[0]['nombre']);
-      console.log(this.miporfolio[0]['apellido']);
-      console.log(this.miporfolio[0]['foto_perfil']);
-      console.log(this.miporfolio[0]['info_profesional']);
+      // console.log(this.miporfolio[0]['id']);
+      // console.log(this.miporfolio[0]['nombre']);
+      // console.log(this.miporfolio[0]['apellido']);
+      // console.log(this.miporfolio[0]['foto_perfil']);
+      // console.log(this.miporfolio[0]['info_profesional']);
       if (this.TokenService.getToken()) {
         this.logged = true;
       } else {
@@ -40,14 +37,11 @@ export class AcercadeComponent implements OnInit {
 
     this.activatedRouter.paramMap.subscribe( (id:Params)=>{
       this.id = id['get']("id");
-      console.log(id + "este es el id");
     });
   
     this.servpersona.buscarPersona(this.miporfolio[0]['id']).subscribe(
       data =>{
-        console.log(this.servpersona.buscarPersona(this.miporfolio[0]['id'])+"encontro persona");
-        this.persona = data;
-        console.log(this.miporfolio);
+        this.miporfolio = data;
       }, err =>{
         this.router.navigate(['']);
       }

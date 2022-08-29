@@ -12,6 +12,9 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
+  // form:FormGroup;
+  // valid = false;
+  // invalid= true;
   isLogged = false;
   isLogginFail = false;
   loginUser!: LoginUser;
@@ -20,8 +23,11 @@ export class IniciarSesionComponent implements OnInit {
   roles: string[] = [];
   mensaje!: string;
 
-  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
-
+  constructor(private formBuilder:FormBuilder, private tokenService: TokenService, private authService: AuthService, private router: Router) { 
+    // this.form = this.formBuilder.group({
+    //   username:['',[ Validators.required]],
+    //   password:['',[ Validators.required]]
+    // });
 
   // form:FormGroup;
 
@@ -36,6 +42,8 @@ export class IniciarSesionComponent implements OnInit {
   //     })
   //   })
   //  }
+  }
+
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -43,12 +51,20 @@ export class IniciarSesionComponent implements OnInit {
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
+  
+    // if(this.form.valid){
+    //   this.valid = true;
+    //   this.invalid = false;
+    // }
+
   }
 
   onLogin(): void{
     this.loginUser = new LoginUser(this.username, this.password); 
     this.authService.login(this.loginUser).subscribe(data =>{
-        this.isLogged = true;
+        // this.valid = true;
+        // this.invalid = false;
+        // this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.username);

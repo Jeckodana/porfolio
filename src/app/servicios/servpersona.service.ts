@@ -13,7 +13,6 @@ export class ServpersonaService {
   constructor(private http: HttpClient) { }
 
   public verPersona(): Observable <persona>{
-    console.log(persona+"servicio agregar persona fncionando");
     return this.http.get<persona>(this.url+ 'ver');
   }
   public buscarPersona(id: number): Observable <any>{

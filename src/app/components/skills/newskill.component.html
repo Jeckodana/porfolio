@@ -2,7 +2,7 @@
     <div class="row">
         <div class="card border-0 shadow rounded-3 my-5">
             <div class="card-body p-4 p-sm-5">
-                <form (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
+                <form  (ngSubmit)="OnCrear()" novalidate #f="ngForm" class="row g-4">
                     <h4>Cargar Habilidad</h4>
                     <div class="formGrop">
                         <div class="col-md-4">
@@ -10,6 +10,7 @@
                                 <label class="form-label">Nueva Skill</label>
                                 <input type="text" class="form-control" id="skill" name="skill" [(ngModel)]="habilidad"
                                     required>
+                                    
                             </div>
                         </div>
                         <br>
@@ -18,6 +19,7 @@
                                 <label for="institucion" class="form-label">Detalle</label>
                                 <input type="text" class="form-control" id="detalle" name="detalle"
                                     [(ngModel)]="detalle" required>
+                               
                             </div>
                         </div>
                         <br>
@@ -29,6 +31,7 @@
                                     para nivel Avanzado.</small>
                                 <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel"
                                     required>
+                                   
                             </div>
                         </div>
                         <br>

@@ -1,8 +1,24 @@
+section{
+    background-image: url(https://images.pexels.com/photos/7464004/pexels-photo-7464004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
+    margin-bottom: 0px;
+}
+
 img.FotoPerfil{
     border-radius: 50%;
     width: 152px;
     height: 152px;
-    margin-top: -450px;
+    margin-top: 150px;
     margin-left: 50px;
     position: relative;
     z-index: index 0;
@@ -23,7 +39,7 @@ h2#Acercade{
     -webkit-text-stroke:whitesmoke 0.3px;
     text-align: center;
     position: relative;
-    margin-top: -500px;
+    margin-top: -200px;
 }
 h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -62,4 +78,28 @@ div#text-acercade{
          
 }
 
-
+@media only screen and (max-width: 768px) { 
+    h2#Acercade{
+        margin-top: 40px;
+    }
+    img.FotoPerfil{
+        margin-top: 40px;
+       
+    }
+    div.center{
+        margin-left: -50px;
+        text-align: center;
+    }
+    div#nombre{
+        margin-top: 0px;
+    }
+}
+footer{
+    background-color: #252627;
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    color:antiquewhite;
+    font-size: small;
+    text-align: center;
+}

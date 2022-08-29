@@ -6,15 +6,18 @@
         <div class="card border-0 shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h3 class="card-title text-center mb-5 fw-light fs-5">Iniciar Sesion</h3>
-            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+            <form  #f="ngForm" (ngSubmit)="onLogin()" novalidate>
               <br>
               <div class="form-floating mb-3">
-                <input type="username" class="form-control" id="username" placeholder="name@example.com" [(ngModel)]="username" name="username" required >
+                <input type="username" class="form-control" id="username" placeholder="name@example.com" [(ngModel)]="username" name="username" required>
+                <!-- <span *ngIf="this.form.get('username')?.errors?.['required']" ></span> -->
                 <label for="username">Usuario</label>
+
               </div>
               <div class="form-floating mb-3">
                 
                 <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password" required >
+                <!-- <span *ngIf="this.form.get('password')?.errors?.['required']" ></span> -->
                 <label for="password">Contraseña</label>
               </div>
               <div class="d-grid">

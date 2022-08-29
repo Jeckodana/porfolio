@@ -13,7 +13,6 @@ export class AutenticacionService {
 
 
   constructor(private http:HttpClient) {
-    console.log("El servicio de autenticación está corriendo");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')||'{}'))
    }
    IniciarSesionComponent(Credential:any): Observable<any> {
