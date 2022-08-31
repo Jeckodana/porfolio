@@ -26,12 +26,7 @@ export class HeaderComponent implements OnInit {
     this.tokenService.logOut();
     window.location.reload();
   }
- /* ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      console.log("Datos Personales"+JSON.stringify(data));
-      this.miporfolio = data[0];
-    })
-  }*/
+
 
   
 }

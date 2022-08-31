@@ -19,6 +19,7 @@ export class NuevaeducacionComponent implements OnInit {
   ngOnInit(): void {
   }
   OnCrear(): void {
+     // Metodo para Agregar item Educacion
     const educa = new Educacion(this.titulo, this.institucion, this.periodo, this.logo_institucion);
     this.ServEducacionService.agregarEducacion(educa).subscribe
     (data =>{alert("Nuevo item Educacion agregado.");

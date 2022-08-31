@@ -7,7 +7,8 @@ import { Skills } from '../models/skills';
   providedIn: 'root'
 })
 export class ServskillService {
-  skurl: String  = 'http://localhost:8080/skill/';
+  // skurl: String  = 'http://localhost:8080/skill/';
+  skurl: String  = 'https://backendporfolioj.herokuapp.com/skill/';
 
   constructor(private http: HttpClient) { }
  

@@ -16,16 +16,9 @@ export class ProyectosComponent implements OnInit {
    logged = false;
 
   ngOnInit(): void {
+     // Metodo para Visualizar item Proyecto
     this.ServproyectosService.verProyecto().subscribe(data => {
-      console.log(data);
       this.proyecto = data;
-      console.log(this.proyecto[0]['id']);
-      console.log(this.proyecto[0]['nombre_proyecto']);
-      console.log(this.proyecto[0]['descripcion']);
-      console.log(this.proyecto[0]['foto_proyecto']);
-      console.log(this.proyecto[0]['fecha_fin']);
-      console.log(this.proyecto[0]['link_evidencia']);
-      console.log(this.proyecto);
       if (this.tokenService.getToken()) {
         this.logged = true;
       } else {
@@ -33,6 +26,8 @@ export class ProyectosComponent implements OnInit {
       }
     });
   }
+
+   // Metodo para Eliminar item Proyecto
   eliminarProyecto(id?: number){
     this.ServproyectosService.eliminarProyecto(id).subscribe(data =>{
       console.log(this.ServproyectosService.eliminarProyecto(id));

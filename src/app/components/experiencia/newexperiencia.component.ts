@@ -20,6 +20,8 @@ export class NewexperienciaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+   // Metodo para Agregar item Experiencia
   OnCrear(): void {
     const expe = new Experiencia(this.puesto, this.empresa, this.fecha_inicio, this.fecha_fin, this.actividades, this.logo_empresa);
     this.ServexperienciaService.agregarExperiencia(expe).subscribe

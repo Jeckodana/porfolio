@@ -7,7 +7,8 @@ import { Proyecto } from '../models/proyecto';
   providedIn: 'root'
 })
 export class ServproyectosService {
-  proyurl: String  = 'http://localhost:8080/proyecto/';
+  // proyurl: String  = 'http://localhost:8080/proyecto/';
+  proyurl: String  = 'https://backendporfolioj.herokuapp.com/proyecto/';
   
   constructor(private http: HttpClient) { }
   public verProyecto(): Observable <any>{

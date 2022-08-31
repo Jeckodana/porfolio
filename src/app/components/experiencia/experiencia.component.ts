@@ -17,18 +17,9 @@ export class ExperienciaComponent implements OnInit {
   constructor(private ServexperienciaService: ServexperienciaService, public router: Router, private tokenService:TokenService) { }
     logged = false;
   ngOnInit(): void {
-  
+   // Metodo para Visualizar item Experiencia
     this.ServexperienciaService.verExperiencia().subscribe(data => {
-      console.log(data);
       this.experiencia = data;
-      console.log(this.experiencia[0]['id']);
-      console.log(this.experiencia[0]['puesto']);
-      console.log(this.experiencia[0]['empresa']);
-      console.log(this.experiencia[0]['fecha_inicio']);
-      console.log(this.experiencia[0]['fecha_fin']);
-      console.log(this.experiencia[0]['logo_empresa']);
-      console.log(this.experiencia[0]['actividades']);
-      console.log(this.experiencia);
       if (this.tokenService.getToken()) {
         this.logged = true;
       } else {
@@ -36,6 +27,8 @@ export class ExperienciaComponent implements OnInit {
       }
     });
   }
+
+   // Metodo para Eliminar item Experiencia
   eliminarExperiencia(id?: number){
     this.ServexperienciaService.eliminarExperiencia(id).subscribe(data =>{
       console.log(this.ServexperienciaService.eliminarExperiencia(id));
@@ -45,10 +38,5 @@ export class ExperienciaComponent implements OnInit {
       })
   }
 
-  // Seleccionar(experiencia: Experiencia){
-  //   let link =['/editarexperiencia/'+ experiencia.id ];
-  //   this.router.navigate(link);
-  //   console.log(experiencia.id);
-  // }
-
+ 
 }

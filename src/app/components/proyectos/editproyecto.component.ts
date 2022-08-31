@@ -14,10 +14,12 @@ export class EditproyectoComponent implements OnInit {
   constructor(private ServproyectosService: ServproyectosService, private router: Router, private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+     // Metodo para Identificar id item Proyecto
     this.activatedRouter.paramMap.subscribe( (id:Params)=>{
       this.id = id['get']("id"); 
     });
 
+     // Metodo para Buscar item Proyecto
     this.ServproyectosService.buscarProyecto(this.id).subscribe(
       data =>{
         this.proyecto = data;
@@ -28,6 +30,8 @@ export class EditproyectoComponent implements OnInit {
       }
     )
   }
+
+   // Metodo para Actualizar item Proyecto
   Update(): void{
     this.ServproyectosService.actualizarProyecto(this.proyecto.id, this.proyecto).subscribe(data =>{
       alert("Item proyecto actualizado.");

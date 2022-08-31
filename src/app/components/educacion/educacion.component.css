@@ -1,18 +1,24 @@
 section{
     background-image: url(https://images.pexels.com/photos/7464004/pexels-photo-7464004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
-    background-attachment: fixed;
+    /* height: auto; 
+    width: 100%;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    padding-bottom: 100%;
+    background-size: cover; 
+    padding-bottom: 100%; 
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: auto;
-    width: auto;
-    position: relative;
     margin-bottom: 0px;
+     
 }
+/* @media screen and (max-width: 720px) {
+    .section {
+       
+
+    }
+} */
+
+
 h2#Educacion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;

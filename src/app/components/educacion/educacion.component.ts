@@ -18,14 +18,11 @@ export class EducacionComponent implements OnInit {
  
 
   ngOnInit(): void {
+
+     // Metodo para Visualizar item Educacion
     this.ServEducacionService.verEducacion().subscribe(data => {
       console.log(data);
       this.educacion = data;
-      console.log(this.educacion[0]['id']);
-      console.log(this.educacion[0]['titulo']);
-      console.log(this.educacion[0]['institucion']);
-      console.log(this.educacion[0]['periodo']);
-      console.log(this.educacion);
       if (this.TokenService.getToken()) {
         this.logged = true;
       } else {
@@ -33,21 +30,17 @@ export class EducacionComponent implements OnInit {
       }
     });
 
-  
    }
 
+  // Metodo para Eliminar item Educacion
   eliminarEducacion(id?: number){
     this.ServEducacionService.eliminarEducacion(id).subscribe(data =>{
       console.log(this.ServEducacionService.eliminarEducacion(id));
-      location. reload();//metodo para refrescar la pagina
+      location. reload();//para refrescar la pagina
       }, err => {
         alert("No se pudo eliminar el item de educación");
       })
   }
 
-  Seleccionar(educacion: Educacion){
-    let link =['/editareducacion/'+ educacion.id ];
-    this.router.navigate(link);
-    console.log(educacion.id);
-  }
+ 
 }

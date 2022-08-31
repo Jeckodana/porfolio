@@ -1,26 +1,20 @@
-<section class="class1"> 
+<section class="class1">
     <div class="center"><img class="img-fluid, FotoPerfil" [src]="miporfolio[0]['foto_perfil']"></div>
-    <h2 id="Acercade">About me 
-         <!-- <i *ngIf="logged" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dialogo1" class="bi bi-pen-fill btn"  [routerLink]="['/editpersona/'+ miporfolio['id'] ]"></i> -->
-         <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dialogo1">
-            Editar
-        </button> -->
-        <a href = "#" *ngIf="logged" class="bi bi-pen-fill " data-bs-toggle="modal" data-bs-target="#dialogo1"></a>
+    <h2 id="Acercade">About me
+
+        <a href="#" *ngIf="logged" class="bi bi-pen-fill " data-bs-toggle="modal" data-bs-target="#dialogo1"></a>
     </h2>
-    
+
     <div id="nombre">{{miporfolio[0]['nombre']}} {{miporfolio[0]['apellido']}}</div>
-    
+
     <br>
     <div id="Titulo">
-        <!-- <div class="btn-edit" onclick="cambiar_parrafo()"> -->
-            <!-- <a href="#" class="btn-rigth">
-                <i *ngIf="logged" class="fa fa-pen"></i>
-            </a>         -->
-        </div>
- 
+
+    </div>
+
     <div id="text-acercade">
         <p>{{miporfolio[0]['info_profesional']}} </p>
-    </div>  
+    </div>
 
 
     <div class="modal fade" id="dialogo1">
@@ -38,28 +32,33 @@
                             <div class="row mb-3">
                                 <label for="nombre" class="clo-3 col-form-label">Nombre</label>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" id="nombre" name="nombre" value="" [(ngModel)]="miporfolio[0]['nombre']" required>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" value=""
+                                        [(ngModel)]="miporfolio[0]['nombre']" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="apellido" class="clo-3 col-form-label">Apellido</label>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" id="apellido" name="apellido" value="" [(ngModel)]="miporfolio[0]['apellido']" required>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" value=""
+                                        [(ngModel)]="miporfolio[0]['apellido']" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="foto_perfil" class="clo-3 col-form-label">URL a la foto de perfil</label>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" id="foto_perfil" name="foto_perfil"value="" [(ngModel)]="miporfolio[0]['foto_perfil']" required>
+                                    <input type="text" class="form-control" id="foto_perfil" name="foto_perfil" value=""
+                                        [(ngModel)]="miporfolio[0]['foto_perfil']" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="info_profesional" class="clo-3 col-form-label">Información profesional</label>
+                                <label for="info_profesional" class="clo-3 col-form-label">Información
+                                    profesional</label>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" id="info_profesional" name="info_profesional" value="" [(ngModel)]="miporfolio[0]['info_profesional']" required>
+                                    <input type="text" class="form-control" id="info_profesional"
+                                        name="info_profesional" value="" [(ngModel)]="miporfolio[0]['info_profesional']"
+                                        required>
                                 </div>
                             </div>
-                            
 
                             <div class="row mb-3">
                                 <div class="clo-9 offset-3">
@@ -72,7 +71,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 <footer>
     <p>Copyright &copy; 2022 Diseño web realizado por Jesica Deluret</p>

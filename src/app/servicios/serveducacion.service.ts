@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServEducacionService {
- edurl: String  = 'http://localhost:8080/educacion/';
+//  edurl: String  = 'http://localhost:8080/educacion/';
+ edurl: String  = 'https://backendporfolioj.herokuapp.com/educacion/';
 
  constructor(private http: HttpClient) { }
 

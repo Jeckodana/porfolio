@@ -16,12 +16,12 @@ export class EditeducacionComponent implements OnInit {
   constructor(private ServEducacionService: ServEducacionService, private router: Router, private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
-   
+    // Metodo para Obtener id item Educacion
     this.activatedRouter.paramMap.subscribe( (id:Params)=>{
       this.id = id['get']("id");
  
     });
-  
+   // Metodo para Buscar item Educacion
     this.ServEducacionService.buscarEducacion(this.id).subscribe(
       data =>{
         console.log(this.ServEducacionService.buscarEducacion(this.id));
@@ -34,7 +34,7 @@ export class EditeducacionComponent implements OnInit {
     )
     }
 
-  
+  // Metodo para Actualizar item Educacion
   Update(): void{
     this.ServEducacionService.actualizarEducacion(this.educacion.id, this.educacion).subscribe(data =>{
       alert("Item educacion actualizado.");

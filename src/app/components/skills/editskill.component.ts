@@ -14,11 +14,13 @@ export class EditskillComponent implements OnInit {
   constructor(private ServskillService: ServskillService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+     // Metodo para Obtener id item seleccionado
     this.activatedRoute.paramMap.subscribe( (id:Params)=>{
       this.id = id['get']("id");
  
     });
 
+     // Metodo para Buscar item Skills
     this.ServskillService.buscarSkills(this.id).subscribe(
       data =>{
         console.log(this.ServskillService.buscarSkills(this.id));
@@ -31,7 +33,7 @@ export class EditskillComponent implements OnInit {
     )
   }
 
-  
+   // Metodo para Actualizar item Skills
   Update(): void{
     this.ServskillService.actualizarSkills(this.skills.id, this.skills).subscribe(data =>{
       alert("Item habilidad actualizado.");

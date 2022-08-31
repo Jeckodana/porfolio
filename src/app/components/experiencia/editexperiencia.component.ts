@@ -16,10 +16,13 @@ export class EditexperienciaComponent implements OnInit {
   constructor(private ServexperienciaService: ServexperienciaService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
+ // Metodo para Obtener id item Experiencia
     this.activatedRouter.paramMap.subscribe( (id:Params)=>{
       this.id = id['get']("id"); 
     });
 
+ // Metodo para Buscar item Experiencia
     this.ServexperienciaService.buscarExperiencia(this.id).subscribe(
       data =>{
         this.experiencia = data;
@@ -31,7 +34,7 @@ export class EditexperienciaComponent implements OnInit {
     )
   }
 
-  
+   // Metodo para Actualizar item Experiencia
   Update(): void{
     this.ServexperienciaService.actualizarExperiencia(this.experiencia.id, this.experiencia).subscribe(data =>{
       alert("Item experiencia actualizado.");

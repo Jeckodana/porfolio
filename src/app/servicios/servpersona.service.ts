@@ -8,7 +8,8 @@ import { persona } from '../models/persona';
   providedIn: 'root'
 })
 export class ServpersonaService {
-  url = 'http://localhost:8080/persona/';
+  // url = 'http://localhost:8080/persona/';
+  url = 'https://backendporfolioj.herokuapp.com/persona/';
 
   constructor(private http: HttpClient) { }
 

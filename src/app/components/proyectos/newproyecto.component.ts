@@ -20,6 +20,7 @@ export class NewproyectoComponent implements OnInit {
   ngOnInit(): void {
   }
   OnCrear(): void {
+     // Metodo para Agregar item Experiencia
     const proye = new Proyecto(this.nombre_proyecto, this.descripcion, this.foto_proyecto, this.fecha_fin, this.link_evidencia);
     this.ServproyectosService.agregarProyecto(proye).subscribe
     (data =>{alert("Nuevo item Proyecto agregado.");

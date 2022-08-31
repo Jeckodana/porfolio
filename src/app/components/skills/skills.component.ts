@@ -17,14 +17,9 @@ export class SkillsComponent implements OnInit {
   logged = false;
 
   ngOnInit(): void {
+     // Metodo para Visualizar item Skills
     this.ServskillService.verSkills().subscribe(data => {
-      console.log(data);
       this.skills = data;
-      console.log(this.skills[0]['id']);
-      console.log(this.skills[0]['habilidad']);
-      console.log(this.skills[0]['nivel']);
-      console.log(this.skills[0]['detalle']);
-      console.log(this.skills);
       if (this.TokenService.getToken()) {
         this.logged = true;
       } else {
@@ -32,22 +27,17 @@ export class SkillsComponent implements OnInit {
       }
     });
   }
-
+ // Metodo para Eliminar item Skills
 eliminarSkill(id?: number){
   this.ServskillService.eliminarSkill(id).subscribe(data =>{
     console.log(this.ServskillService.eliminarSkill(id));
     alert("Item Skill eliminado");
-    location. reload();//metodo para refrescar la pagina
+    location. reload();//para refrescar la pagina
     }, err => {
       alert("No se pudo eliminar el item de skill");
     })
 }
 
-// Seleccionar(Skills: Skills){
-//   let link =['/editarskilln/'+ skills.id ];
-//   this.router.navigate(link);
-//   console.log(skills.id);
-// }
 
 
 }

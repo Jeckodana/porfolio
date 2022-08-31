@@ -16,7 +16,6 @@ import { PorfolioService } from './servicios/porfolio.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { NuevaeducacionComponent } from './components/educacion/nuevaeducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
@@ -39,7 +38,6 @@ import { EditskillComponent } from './components/skills/editskill.component';
     ProyectosComponent,
     IniciarSesionComponent,
     PorfolioComponent,
-    FooterComponent,
     NuevaeducacionComponent,
     EditeducacionComponent,
     NewexperienciaComponent,
